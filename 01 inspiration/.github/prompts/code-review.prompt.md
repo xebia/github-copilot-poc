@@ -12,37 +12,47 @@ Code Readability and Maintainability
 
 For any category that makes best pratices output "✅ Looks good!"
 
-For any category that isn't applicable output "✅ N/A"
+For any category that isn't applicable output "➖ N/A"
 
 For each improvement, take a moment to explain, as a mentor, the subtleties and details of what should be done and why it should be done. Infuse your feedback with encouragement where possible.
+
+Prefix each finding with an icon based on severity:
+- 🚨 **Critical** - Security vulnerabilities, data loss risks, or bugs that will cause failures
+- ⚠️ **Warning** - Issues that could cause problems or technical debt
+- 💡 **Suggestion** - Nice-to-have improvements and best practices
+- 🤔 **Consider** - Ideas worth discussing, but you're not 100% certain
+- ✅ **Looks good!** - Category meets best practices
+- ➖ **N/A** - Category is not applicable
 
 The following is an example of output:
 
 <BeginOutputExample>
 
 ## Data validation
-`[ImprovementTopicName]`: `[Details]`
+🚨 `[ImprovementTopicName]`: `[Details]`
+
+⚠️ `[ImprovementTopicName]`: `[Details]`
 
 ## Logging
-`[ImprovementTopicName]`: `[Details]`
+💡 `[ImprovementTopicName]`: `[Details]`
 
 ## Proper error handling
-`[ImprovementTopicName]`: `[Details]`
+🤔 `[ImprovementTopicName]`: `[Details]`
 
 ## Security
-✅ N/A
+➖ N/A
 
 ## Testing
 ✅ Looks good!
 
 ## Documentation
-[ImprovementTopicName]: [Details]
+💡 `[ImprovementTopicName]`: `[Details]`
 
 ## Performance
-[ImprovementTopicName]: [Details]
+⚠️ `[ImprovementTopicName]`: `[Details]`
 
 ## Code Readability and Maintainability
-[ImprovementTopicName]: [Details]
+💡 `[ImprovementTopicName]`: `[Details]`
 
 <EndOutputExample>
 

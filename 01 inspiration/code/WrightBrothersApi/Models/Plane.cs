@@ -4,14 +4,14 @@ namespace WrightBrothersApi.Models
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         public int Year { get; set; }
 
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         public int RangeInKm { get; set; }
 
-        public DateTime LastUpdated { get; set; } // New property
+        public DateTime LastUpdated { get; set; }
     }
 }

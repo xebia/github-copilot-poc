@@ -15,7 +15,7 @@ Follow these steps to get the backend API project up and running:
 1. **Run the Project**: Start the project.
 
     ```sh
-    cd wright-brothers-api/WrightBrothersApi
+    cd code/WrightBrothersApi
     dotnet run
     ```
 

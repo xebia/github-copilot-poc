@@ -57,7 +57,7 @@ namespace WrightBrothersApi.Repositories
             return Flights;
         }
 
-        public Flight GetFlightById(int id)
+        public Flight? GetFlightById(int id)
         {
             return Flights.ElementAt(id);
         }
@@ -69,7 +69,7 @@ namespace WrightBrothersApi.Repositories
             return flight;
         }
 
-        public Flight UpdateFlight(Flight updatedFlight)
+        public Flight? UpdateFlight(Flight updatedFlight)
         {
             var flight = Flights.FirstOrDefault(f => f.Id == updatedFlight.Id);
             if (flight != null)

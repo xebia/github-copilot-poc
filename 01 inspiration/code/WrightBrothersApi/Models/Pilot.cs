@@ -3,9 +3,9 @@
 public class Pilot
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
     public int BirthYear { get; set; }
     public double Weight { get; set; } // Important for early aviation constraints
     public double TotalFlightHours { get; set; }
-    public string AircraftType { get; set; }
+    public string AircraftType { get; set; } = string.Empty;
 }
