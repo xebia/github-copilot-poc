@@ -7,6 +7,11 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    
+    <!-- Test-specific analyzer suppressions -->
+    <!-- CA1707: Test methods use underscores for readability (xUnit convention) -->
+    <!-- CA1062: xUnit IClassFixture injects dependencies, null validation not needed -->
+    <NoWarn>$(NoWarn);CA1707;CA1062</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
