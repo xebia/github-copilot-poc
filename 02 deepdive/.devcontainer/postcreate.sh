@@ -15,7 +15,7 @@ uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
 # Install Playwright dependencies for MCP tools
 echo "🎭 Installing Playwright..."
 npm install -g playwright
-npx playwright install chromium --with-deps
+npx playwright install chromium chrome --with-deps
 
 # ==================== npm Dependencies ====================
 echo "📦 Installing npm dependencies..."
@@ -24,6 +24,19 @@ npm install
 # Install markdownlint-cli2 globally for CLI access
 echo "📝 Installing markdownlint-cli2 globally..."
 npm install -g markdownlint-cli2 || echo "⚠️  Warning: Failed to install markdownlint-cli2 globally, using local version from package.json"
+
+# ==================== .NET Dev Certificates ====================
+echo "🔐 Setting up .NET HTTPS development certificate..."
+# Clean old certificates (ignore errors if none exist)
+sudo -E dotnet dev-certs https --clean > /dev/null 2>&1 || true
+dotnet dev-certs https --clean > /dev/null 2>&1 || true
+# Generate new certificate
+dotnet dev-certs https
+# Trust it on Linux by installing to system certificates
+sudo mkdir -p /usr/local/share/ca-certificates/aspnet
+sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
+sudo update-ca-certificates
+echo "✅ HTTPS certificate generated and trusted"
 
 # Verify installations
 echo ""

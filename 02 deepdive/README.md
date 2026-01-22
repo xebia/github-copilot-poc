@@ -71,6 +71,13 @@ projects together using `dotnet build` from the solution root.
 
 4. **Run the Application**
 
+   **Option 1: Using F5 (Recommended for debugging)**
+   - Press F5 in VS Code
+   - The application will build, launch, and open in your browser automatically
+   - You can set breakpoints and debug your code
+
+   **Option 2: Using the terminal**
+
    ```bash
    cd src/TicTacToe.Web
    dotnet run

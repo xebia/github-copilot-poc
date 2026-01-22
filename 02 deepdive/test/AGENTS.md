@@ -7,6 +7,15 @@
 - **FluentAssertions** - Assertion library (optional, for more readable assertions)
 - **.NET 8.0** - Target framework
 
+## General Code Guidelines
+
+Test code is source code. Follow the code quality and best practices outlined in [../src/AGENTS.md](../src/AGENTS.md), including:
+
+- Clean, self-documenting code
+- Meaningful naming conventions
+- Proper async/await patterns
+- C# naming conventions
+
 ## Testing Patterns and Practices
 
 ### Test Organization

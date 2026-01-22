@@ -40,7 +40,6 @@
     "github.copilot.chat.scopeSelection": true, // Prompt for symbol scope with /explain
     "notebook.experimental.generate": true, // Enable Generate action for notebook cells
     // ==================== Extension Settings ====================
-    "githubPullRequests.codingAgent.uiIntegration": true,
     "terminal.integrated.defaultProfile.linux": "pwsh",
     "terminal.integrated.cwd": "/workspaces/github-copilot-poc/02 deepdive",
     // ==================== Terminal Persistence ====================
@@ -60,22 +59,8 @@
         ".specify/scripts/powershell/": true,
         "curl": true,
         "wget": true,
-        "/^dotnet\\s+build\\b.*/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^dotnet\\s+test\\b.*/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^dotnet\\s+format\\b.*/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^pwsh\\b.*/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
+        "dotnet": true,
+        "pwsh": true,
         "Compare-Object": true,
         "ConvertFrom-Json": true,
         "ConvertTo-Json": true,
@@ -152,7 +137,7 @@
         "wc": true,
         "which": true,
         "whoami": true,
-        "&": true
+        "&": true,
     },
     "github.copilot.chat.virtualTools.threshold": 0,
     "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
