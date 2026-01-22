@@ -402,6 +402,8 @@ FodyWeavers.xsd
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mcp.json
+!.vscode/playwright-mcp-config.json
 !.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
@@ -416,3 +418,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+.tmp

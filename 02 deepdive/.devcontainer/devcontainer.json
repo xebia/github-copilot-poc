@@ -1,0 +1,47 @@
+{
+  "name": "C# Development with Spec Kit",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/powershell:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts",
+      "nodeGypDependencies": true
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12",
+      "installTools": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // .NET Development
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        // Azure & Infrastructure
+        "github.copilot",
+        "github.copilot-chat",
+        // Testing & Quality
+        "ms-playwright.playwright",
+        "DavidAnson.vscode-markdownlint",
+        // PowerShell
+        "ms-vscode.powershell"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "pwsh"
+      }
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/postcreate.sh",
+  "remoteUser": "vscode",
+  // Mount host .gitconfig into container so Git settings (name, email, aliases) are automatically available
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+  ]
+}

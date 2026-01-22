@@ -1,0 +1,21 @@
+{
+  "servers": {
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--isolated",
+        "--no-sandbox",
+        "--config=/workspaces/github-copilot-poc/02 deepdive/.vscode/playwright-mcp-config.json"
+      ],
+      "env": {
+        "HOME": "/home/vscode"
+      }
+    },
+  }
+}

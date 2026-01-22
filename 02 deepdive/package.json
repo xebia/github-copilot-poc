@@ -1,0 +1,13 @@
+{
+    "name": "github-copilot-poc-deepdive",
+    "version": "1.0.0",
+    "description": "GitHub Copilot POC - Deep Dive with TicTacToe",
+    "private": true,
+    "scripts": {
+        "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+        "lint:md:fix": "markdownlint-cli2 --fix \"**/*.md\" \"#node_modules\""
+    },
+    "devDependencies": {
+        "markdownlint-cli2": "^0.20.0"
+    }
+}
